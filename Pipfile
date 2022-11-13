@@ -7,6 +7,8 @@ name = "pypi"
 django = "==3.2"
 pylint = "*"
 django-tastypie = "*"
+gunicorn = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 pylint = "*"

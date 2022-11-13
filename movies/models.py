@@ -18,5 +18,4 @@ class Movie(models.Model):
     date_created = models.DateField(default=timezone.now)
 
     def __str__(self):
-        return self.name
-
+        return self.title

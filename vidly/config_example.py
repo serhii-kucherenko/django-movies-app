@@ -1,0 +1,5 @@
+HOST = "Database host"
+NAME = "Database name"
+USER = "Database user "
+PASSWORD = "Database password"
+PORT = "Database port"
