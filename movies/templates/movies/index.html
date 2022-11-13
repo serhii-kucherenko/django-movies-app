@@ -1,0 +1,35 @@
+{% extends 'movies/base.html' %} {% block content %}
+
+<div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <thead
+      class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+    >
+      <tr>
+        <th scope="col" class="py-3 px-6">Title</th>
+        <th scope="col" class="py-3 px-6">Genre</th>
+        <th scope="col" class="py-3 px-6">Stock</th>
+        <th scope="col" class="py-3 px-6">Daily Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for movie in movies %}
+      <tr
+        class="dark:hover:bg-gray-600 bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+      >
+        <td
+          scope="row"
+          class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          {{ movie.title }}
+        </td>
+        <td class="py-4 px-6">{{ movie.genre.name }}</td>
+        <td class="py-4 px-6">{{ movie.number_in_stock }}</td>
+        <td class="py-4 px-6">{{ movie.daily_rate }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
