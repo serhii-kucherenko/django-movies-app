@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block content %}
+
+<h2 class="text-lg font-semibold text-gray-900 dark:text-white">Title</h2>
+<p
+  class="space-y-1 mb-2 max-w-md list-none list-inside text-gray-500 dark:text-gray-400"
+>
+  {{ movie.title}}
+</p>
+
+<h2 class="text-lg font-semibold text-gray-900 dark:text-white">Genre</h2>
+<p
+  class="space-y-1 mb-2 max-w-md list-none list-inside text-gray-500 dark:text-gray-400"
+>
+  {{ movie.genre.name}}
+</p>
+
+<h2 class="text-lg font-semibold text-gray-900 dark:text-white">Stock</h2>
+<p
+  class="space-y-1 mb-2 max-w-md list-none list-inside text-gray-500 dark:text-gray-400"
+>
+  {{ movie.number_in_stock}}
+</p>
+
+<h2 class="text-lg font-semibold text-gray-900 dark:text-white">Daily Rate</h2>
+<p
+  class="space-y-1 mb-2 max-w-md list-none list-inside text-gray-500 dark:text-gray-400"
+>
+  {{ movie.daily_rate}}
+</p>
+
+{% endblock %}
