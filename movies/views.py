@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 
 from .models import Movie
 
@@ -10,6 +10,6 @@ def index(request):
 
 
 def detail(request, movie_id):
-    movie = Movie.objects.get(pk=movie_id)
+    movie = get_object_or_404(Movie, pk=movie_id)
 
     return render(request, 'movies/detail.html', {'movie': movie})

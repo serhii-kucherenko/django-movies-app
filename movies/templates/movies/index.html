@@ -10,6 +10,7 @@
         <th scope="col" class="py-3 px-6">Genre</th>
         <th scope="col" class="py-3 px-6">Stock</th>
         <th scope="col" class="py-3 px-6">Daily Rate</th>
+        <th width="80" class="py-3 px-6"></th>
       </tr>
     </thead>
     <tbody>
@@ -26,6 +27,13 @@
         <td class="py-4 px-6">{{ movie.genre.name }}</td>
         <td class="py-4 px-6">{{ movie.number_in_stock }}</td>
         <td class="py-4 px-6">{{ movie.daily_rate }}</td>
+        <td class="py-4 px-6">
+          <a
+            href="{% url 'movies:detail' movie.id %}"
+            class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+            >Edit</a
+          >
+        </td>
       </tr>
       {% endfor %}
     </tbody>
